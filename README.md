@@ -1,1 +1,186 @@
-# ankerposuhadosvid
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>АнкерПосухаДосвід</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(74, 107, 45, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      backdrop-filter: blur(3px);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background-color: rgba(59, 81, 34, 0.95);
+      text-align: center;
+      padding: 0.6rem;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d6e8b3;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(3px);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #4a6b2d;
+      border-bottom: 3px solid #b5d28a;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #4a6b2d;
+      color: #fff;
+      border: none;
+      padding: 0.9rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #3b5122;
+    }
+
+    footer {
+      text-align: center;
+      background-color: rgba(74, 107, 45, 0.9);
+      color: #fff;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      backdrop-filter: blur(3px);
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      main {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>АнкерПосухаДосвід</h1>
+    <p>Сучасні рішення для аграріїв — досвід, який працює навіть у посуху</p>
+  </header>
+
+  <nav>
+    <a href="#about">Про нас</a>
+    <a href="#advantages">Переваги</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>Про нас</h2>
+      <p>
+        <strong>АнкерПосухаДосвід</strong> — це команда українських аграрних експертів, 
+        які працюють над впровадженням технологій ефективного збереження вологи, 
+        підвищення врожайності та оптимізації обробітку ґрунту.
+      </p>
+      <p>
+        Ми допомагаємо господарствам адаптуватися до кліматичних викликів, 
+        впроваджуючи інноваційні рішення та перевірені практики для сухих регіонів України.
+      </p>
+    </section>
+
+    <section id="advantages">
+      <h2>Наші переваги</h2>
+      <ul>
+        <li>✅ Реальні польові досліди на українських ґрунтах</li>
+        <li>✅ Підтримка фермерів у впровадженні нових технологій</li>
+        <li>✅ Ефективні рішення навіть у посушливих умовах</li>
+        <li>✅ Навчальні програми та консалтинг для агрономів</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Зв’язатися з нами</h2>
+      <p>Залиште повідомлення — і ми з вами зв’яжемось найближчим часом:</p>
+      <form onsubmit="event.preventDefault(); alert('Дякуємо! Ваше повідомлення надіслано.');">
+        <input type="text" placeholder="Ваше ім’я" required />
+        <input type="email" placeholder="Email" required />
+        <textarea rows="5" placeholder="Ваше повідомлення"></textarea>
+        <button type="submit">Надіслати</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 АнкерПосухаДосвід | Всі права захищені</p>
+  </footer>
+</body>
+</html>
