@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>АнкерПосухаДосвід — Агро-рішення майбутнього</title>
+  <style>
+    :root{--bg:#f6f8f3;--card:#ffffff;--accent:#5a8c35;--muted:#6b7280;--text:#1a1c18}
+    html,body{height:100%;margin:0;font-family:'Inter',Segoe UI,Roboto,system-ui,-apple-system,'Helvetica Neue',Arial;color:var(--text)}
+    body{background:linear-gradient(180deg,#e6f3dd 0%, #f9faf7 100%);display:flex;align-items:center;justify-content:center;padding:32px}
+    .container{width:100%;max-width:1100px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#a3d36c);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;box-shadow:0 6px 18px rgba(90,140,53,.3)}
+    h1{font-size:22px;margin:0}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+
+    .grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+    .card{background:var(--card);padding:22px;border-radius:14px;box-shadow:0 6px 20px rgba(90,140,53,.1)}
+    .hero h2{margin:0 0 10px 0;font-size:28px;color:var(--accent)}
+    .hero p{margin:0 0 18px 0;color:var(--muted);line-height:1.5}
+    .cta{display:inline-block;padding:10px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#a3d36c);color:#fff;font-weight:600;text-decoration:none}
+
+    .features{display:flex;gap:12px;margin-top:16px}
+    .feature{flex:1;background:rgba(90,140,53,0.05);padding:12px;border-radius:10px}
+    .feature h4{margin:0 0 6px 0;font-size:14px;color:var(--accent)}
+    .feature p{margin:0;color:var(--muted);font-size:13px}
+
+    aside .form-row{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+    input,textarea,button{background:#f8faf5;border:1px solid rgba(0,0,0,0.05);padding:10px;border-radius:10px;color:inherit;font-size:14px}
+    textarea{min-height:120px;resize:vertical}
+    button{cursor:pointer;border:none;background:linear-gradient(90deg,var(--accent),#a3d36c);color:#fff;font-weight:600}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:22px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:900px){.grid{grid-template-columns:1fr;}.logo{width:48px;height:48px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">АПД</div>
+        <div>
+          <h1>АнкерПосухаДосвід</h1>
+          <div class="small">Інноваційні аграрні рішення для стійкого врожаю</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">Про нас</a>
+        <a href="#features">Переваги</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+    </header>
+
+    <main class="grid">
+      <section class="card hero">
+        <h2 id="about">Міцний анкер у посуху — ваш досвід, наша технологія</h2>
+        <p>АнкерПосухаДосвід — це компанія, яка поєднує досвід аграріїв з інноваційними рішеннями для підвищення стійкості культур до посухи. Ми допомагаємо фермерам отримувати стабільні врожаї навіть у складних кліматичних умовах.</p>
+        <a class="cta" id="cta">Зв'язатися</a>
+
+        <div class="features" id="features">
+          <div class="feature">
+            <h4>Адаптивні технології</h4>
+            <p>Наші системи поливу та анкерування ґрунту зменшують втрати вологи.</p>
+          </div>
+          <div class="feature">
+            <h4>Досвід фермерів</h4>
+            <p>Ми працюємо разом із господарствами, які перевіряють рішення на практиці.</p>
+          </div>
+          <div class="feature">
+            <h4>Екологічна ефективність</h4>
+            <p>Захист врожаю без шкоди для землі — наш головний принцип.</p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <h3 id="contact">Напишіть нам</h3>
+        <div class="small">Залиште повідомлення — ми зв’яжемося з вами протягом доби.</div>
+        <div class="form-row">
+          <input id="name" placeholder="Ім’я" />
+          <input id="email" placeholder="Email" />
+        </div>
+        <div class="form-row">
+          <textarea id="message" placeholder="Ваше повідомлення"></textarea>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <button id="send">Надіслати</button>
+          <button id="clear" style="background:#e5e7eb;color:#1a1c18;font-weight:500">Очистити</button>
+        </div>
+
+        <div id="out" class="small" style="margin-top:12px;color:var(--muted)"></div>
+
+        <footer>© <span id="year"></span> АнкерПосухаДосвід</footer>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('cta').addEventListener('click',()=>{location.hash='contact';document.getElementById('name').focus();});
+    document.getElementById('send').addEventListener('click',()=>{
+      const n=document.getElementById('name').value.trim();
+      const e=document.getElementById('email').value.trim();
+      const m=document.getElementById('message').value.trim();
+      if(!n||!e||!m){document.getElementById('out').textContent='Будь ласка, заповніть усі поля.';return}
+      document.getElementById('out').textContent = `Дякуємо, ${n}! Ваше повідомлення отримано — ми відповімо на ${e}.`;
+      setTimeout(()=>{document.getElementById('name').value='';document.getElementById('email').value='';document.getElementById('message').value='';},1000);
+    });
+    document.getElementById('clear').addEventListener('click',()=>{document.getElementById('name').value='';document.getElementById('email').value='';document.getElementById('message').value='';document.getElementById('out').textContent='';});
+  </script>
+</body>
+</html>
