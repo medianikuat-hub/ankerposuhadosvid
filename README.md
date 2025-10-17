@@ -27,7 +27,7 @@
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
 
